@@ -14,6 +14,9 @@
     <string name="menu_delete_task">Delete task</string>
     <string name="menu_more">More</string>
     <string name="navigation_view_header_title">Todo</string>
+    <string name="nav_all">All</string>
+    <string name="nav_active">Active</string>
+    <string name="nav_completed">Completed</string>
     <string name="title_hint">Title</string>
     <string name="description_hint">Enter your task here.</string>
     <string name="cd_save_task">Save task</string>

@@ -4,6 +4,7 @@ import androidx.compose.material.ScaffoldState
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.todo.app.viewmodels.TaskViewModel
 
 @Composable
@@ -12,7 +13,7 @@ fun TaskScreen(
     onBack: () -> Unit,
     onDeleteTask: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: TaskViewModel = TaskViewModel(),
+    viewModel: TaskViewModel = hiltViewModel(),
     scaffoldState: ScaffoldState = rememberScaffoldState()
 ) {
 }

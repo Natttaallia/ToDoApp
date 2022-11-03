@@ -1,4 +1,9 @@
 package com.example.todo.app.viewmodels
 
-class TasksViewModel {
+import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+@HiltViewModel
+class TasksViewModel @Inject constructor() : ViewModel() {
 }

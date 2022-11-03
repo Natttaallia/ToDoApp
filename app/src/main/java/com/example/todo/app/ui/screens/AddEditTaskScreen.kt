@@ -5,6 +5,7 @@ import androidx.compose.material.ScaffoldState
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.todo.app.viewmodels.AddEditTaskViewModel
 
 @Composable
@@ -14,7 +15,7 @@ fun AddEditTaskScreen(
     onBack: () -> Unit,
     modifier: Modifier = Modifier,
     scaffoldState: ScaffoldState = rememberScaffoldState(),
-    viewModel: AddEditTaskViewModel = AddEditTaskViewModel()
+    viewModel: AddEditTaskViewModel = hiltViewModel()
 ) {
 
 }

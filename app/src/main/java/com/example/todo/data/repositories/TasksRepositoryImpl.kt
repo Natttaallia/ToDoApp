@@ -9,11 +9,19 @@ import kotlinx.coroutines.withContext
 import com.example.todo.domain.models.Result
 import com.example.todo.domain.models.Result.Success
 import com.example.todo.domain.models.Result.Error
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
 class TasksRepositoryImpl constructor(
     private val taskDao: TaskDao,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : TasksRepository {
+
+    override fun getTasksStream(): Flow<Result<List<Task>>> {
+        return taskDao.observeTasks().map {
+            Success(it)
+        }
+    }
 
     override suspend fun getTasks(): Result<List<Task>> = withContext(ioDispatcher) {
         return@withContext try {

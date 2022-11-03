@@ -7,6 +7,8 @@ buildscript {
         hiltAndroidXVersion = '1.0.0'
         roomVersion = '2.4.2'
         coroutinesVersion = '1.6.1'
+        accompanistVersion = '0.23.0'
+        archLifecycleVersion = '2.6.0-alpha01'
     }
     dependencies {
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"

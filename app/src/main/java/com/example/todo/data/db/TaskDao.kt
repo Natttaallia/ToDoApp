@@ -2,9 +2,13 @@ package com.example.todo.data.db
 
 import androidx.room.*
 import com.example.todo.domain.models.Task
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDao {
+
+    @Query("SELECT * FROM Tasks")
+    fun observeTasks(): Flow<List<Task>>
 
     @Query("SELECT * FROM Tasks")
     suspend fun getTasks(): List<Task>

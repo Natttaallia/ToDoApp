@@ -1,6 +1,7 @@
 package com.example.todo.domain.repositories
 
 import com.example.todo.domain.models.Task
+import com.example.todo.domain.models.Result
 
 interface TasksRepository {
 

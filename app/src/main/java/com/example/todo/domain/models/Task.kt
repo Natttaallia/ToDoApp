@@ -1,4 +1,5 @@
 package com.example.todo.domain.models
 
-class Task {
-}
+import java.util.*
+
+data class Task(var id: String = UUID.randomUUID().toString())
